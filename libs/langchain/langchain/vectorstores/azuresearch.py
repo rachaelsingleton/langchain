@@ -220,7 +220,7 @@ class AzureSearch(VectorStore):
                 name=FIELDS_CONTENT_VECTOR,
                 type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
                 searchable=True,
-                vector_search_dimensions=len(embedding_function("Text")),
+                dimensions=len(embedding_function("Text")),
                 vector_search_configuration="default",
             ),
             SearchableField(
